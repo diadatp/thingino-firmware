@@ -17,4 +17,4 @@ motor_maxstep_h=3600
 motor_maxstep_v=1800
 motor_pos_0=1850 900
 motor_speed=600
-wlandev=mt7601sta
+wlan_module=mt7601sta
