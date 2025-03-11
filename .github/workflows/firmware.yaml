@@ -20,7 +20,7 @@ on:
         description: 'Enable build time graph'
         required: false
         default: false
-      teacup_only:
+      sannce_only:
         type: boolean
         description: 'Only build Tea Cup profile'
         required: false
@@ -123,8 +123,8 @@ jobs:
       - name: Generate device matrix
         id: set-matrix
         run: |
-          if [[ "${{ github.event.inputs.teacup_only }}" == 'true' ]]; then
-            CONFIGS=$(find configs/cameras/ -type f | sort | awk -F '/' '{print $(NF)}' | awk NF | grep 'teacup')
+          if [[ "${{ github.event.inputs.sannce_only }}" == 'true' ]]; then
+            CONFIGS=$(find configs/cameras/ -type f | sort | awk -F '/' '{print $(NF)}' | awk NF | grep 'sannce')
           else
             CONFIGS=$(find configs/cameras/ -type f | sort | awk -F '/' '{print $(NF)}' | awk NF)
           fi
