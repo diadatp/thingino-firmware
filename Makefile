@@ -38,11 +38,11 @@ BR2_DL_DIR ?= $(HOME)/dl
 
 # working directory
 GIT_BRANCH := $(shell git branch --show-current)
-ifeq ($(GIT_BRANCH),master)
+# ifeq ($(GIT_BRANCH),master)
 OUTPUT_DIR ?= $(HOME)/output/$(CAMERA)
-else
-OUTPUT_DIR ?= $(HOME)/output-$(GIT_BRANCH)/$(CAMERA)
-endif
+# else
+# OUTPUT_DIR ?= $(HOME)/output-$(GIT_BRANCH)/$(CAMERA)
+# endif
 $(info OUTPUT_DIR: $(OUTPUT_DIR))
 export OUTPUT_DIR
 
