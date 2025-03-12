@@ -92,12 +92,7 @@ jobs:
       - name: Generate device matrix
         id: set-matrix
         run: |
-          CONFIGS=$(find configs/cameras/ -type f | sort | awk -F '/' '{print $(NF)}' | awk NF | grep 'sannce')
-          JSON_MATRIX="{\"thingino-version\": ["
-          for CONFIG in $CONFIGS; do
-            JSON_MATRIX+="\"${CONFIG}\","
-          done
-          JSON_MATRIX="${JSON_MATRIX%,}]}"
+          JSON_MATRIX="{\"thingino-version\": [\"sannce_i21ag\"]}"          
           echo "Matrix: $JSON_MATRIX"
           echo "matrix=$JSON_MATRIX" >> $GITHUB_OUTPUT
 
